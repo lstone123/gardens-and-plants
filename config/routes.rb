@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   resources :gardens do
-    resources :plants, only: :create
+    resources :plants, only: :create   # post 'gardens/:garden_id/plants', to: 'plants#create'
   end
-
-  # post 'gardens/:garden_id/plants', to: 'plants#create'
-  # get 'gardens/:garden_id/plants/new', to: 'plants#new'
+  # get 'gardens/:garden_id/plants/new', to: 'plants#new' # DONT NEED AS WE ARE BUILDING OUR FORM FROM THE GARDEN SHOW
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
