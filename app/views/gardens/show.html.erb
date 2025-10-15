@@ -1,10 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @garden %>
-
-<div>
-  <%= link_to "Edit this garden", edit_garden_path(@garden) %> |
-  <%= link_to "Back to gardens", gardens_path %>
-
-  <%= button_to "Destroy this garden", @garden, method: :delete %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.banner_url %>);">
+  <div class="container">
+    <h1><%= @garden.name %></h1>
+  </div>
 </div>
